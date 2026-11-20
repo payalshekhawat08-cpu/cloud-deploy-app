@@ -1,0 +1,26 @@
+# Render Blueprint: defines compute + managed database + env vars as code
+services:
+  - type: web
+    name: cloud-deploy-app
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --access-logfile -
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: APP_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: cloud-deploy-db
+          property: connectionString
+
+databases:
+  - name: cloud-deploy-db
+    plan: free
+    databaseName: appdb
+    user: appuser
