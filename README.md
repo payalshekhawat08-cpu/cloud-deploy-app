@@ -2,7 +2,7 @@
 
 A small web application deployed on a cloud platform to demonstrate core cloud concepts: compute, managed database, networking, access control, secrets management, logging, monitoring and resource quotas.
 
-**Live website:** `https://cloud-deploy-app-etun.onrender.com/`
+**Live website:** https://cloud-deploy-app-etun.onrender.com/
 
 ## Deployment Flow
 
@@ -94,11 +94,12 @@ python app.py                   # http://localhost:5000 (uses SQLite)
 
 ### Environment Variables (values hidden)
 ![Environment](environment.png)
+
 ## Key Learnings
 - Separating configuration from code with environment variables
 - Provisioning compute and a managed database as code (Blueprint)
 - Using health checks and logs for observability
 - Understanding free-tier resource limits and their trade-offs
-- 
+  
 ## Author
 **Payal Shekhawat**
