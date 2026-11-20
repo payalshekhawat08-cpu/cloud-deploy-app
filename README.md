@@ -2,7 +2,7 @@
 
 A small web application deployed on a cloud platform to demonstrate core cloud concepts: compute, managed database, networking, access control, secrets management, logging, monitoring and resource quotas.
 
-**Live website:** `PASTE_YOUR_RENDER_URL_HERE`
+**Live website:** `https://cloud-deploy-app-etun.onrender.com/`
 
 ## Deployment Flow
 
@@ -83,8 +83,17 @@ python app.py                   # http://localhost:5000 (uses SQLite)
 - **Health check:** `https://<your-url>/health`
 
 ## Screenshots
-Add screenshots here (dashboard, environment variables page with values hidden, logs, live site).
+### Live Website
+![Live site](live-site.png)
 
+### Health Check Endpoint
+![Health check](health.png)
+
+### Application Logs
+![Logs](logs.png)
+
+### Environment Variables (values hidden)
+![Environment](environment.png)
 ## Key Learnings
 - Separating configuration from code with environment variables
 - Provisioning compute and a managed database as code (Blueprint)
